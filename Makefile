@@ -7,3 +7,8 @@ stop:
 	docker-compose down
 logs:
 	docker-compose logs -ft
+shell:
+	docker-compose exec app sh
+status:
+	docker-compose ps
+ps: status

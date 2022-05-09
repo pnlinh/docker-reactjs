@@ -22,6 +22,11 @@ make stop
 make shell
 ```
 
+### To view container status
+```shell
+make ps
+```
+
 ### To debug container log
 ```shell
 make logs
