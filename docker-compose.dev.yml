@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: pnlinh/reactjs:prod
+    restart: always
+    expose:
+      - "8001"
+    environment:
+      VIRTUAL_PORT: 8001
+      VIRTUAL_HOST: "localhost"
+      NODE_ENV: "production"
+    tty: true
+    networks:
+      - localnet
+
+networks:
+  localnet:
+    external:
+      name: localnet
