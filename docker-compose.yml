@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: reactjs
+    hostname: reactjs
     volumes:
       - ./src:/app/src
     ports:
