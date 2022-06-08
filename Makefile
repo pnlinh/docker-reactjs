@@ -23,6 +23,9 @@ logs:
 shell:
 	docker-compose exec app sh
 
+root:
+	docker-compose exec app bash
+
 ps: status
 
 status:

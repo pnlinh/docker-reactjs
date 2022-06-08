@@ -1,5 +1,4 @@
-FROM node:16 AS development
-ENV NODE_ENV development
+FROM node:16
 
 WORKDIR /app
 

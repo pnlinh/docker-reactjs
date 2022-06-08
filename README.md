@@ -12,7 +12,7 @@ make install
 make start
 ```
 
-### To start project
+### To stop project
 ```shell
 make stop
 ```
@@ -20,6 +20,11 @@ make stop
 ### To execute container
 ```shell
 make shell
+```
+
+### To execute container with root user
+```shell
+make root
 ```
 
 ### To view container status
