@@ -1,1 +1,11 @@
 /node_modules
+/dist
+/build
+/docker
+/.git
+Dockerfile
+Dockerfile.dev
+Dockerfile.prod
+npm-debug.log
+.dockerignore
+README.md
