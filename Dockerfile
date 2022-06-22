@@ -2,12 +2,11 @@ FROM node:16
 
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json", "/app/"]
+COPY package*.json .
+RUN npm install
 
-RUN yarn install
-
-COPY . .
+COPY ./ .
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
