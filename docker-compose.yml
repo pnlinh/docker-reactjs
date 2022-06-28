@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reactjs
+    hostname: reactjs
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3000:3000"
+    tty: true
