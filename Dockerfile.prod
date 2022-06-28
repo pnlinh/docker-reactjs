@@ -1,0 +1,21 @@
+FROM node:16 AS  build
+
+WORKDIR /app
+
+COPY package*.json .
+RUN npm install
+
+COPY ./ .
+
+RUN npm build
+RUN rm -rf node_modules
+
+FROM alpine:3.7
+WORKDIR /app
+RUN apk --update --no-cache add nginx
+COPY --from=build /app/build/ /app/
+ADD docker/rootfs /
+
+EXPOSE 8001
+
+CMD ["/usr/sbin/nginx"]
